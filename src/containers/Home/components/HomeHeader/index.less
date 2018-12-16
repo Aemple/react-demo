@@ -1,0 +1,62 @@
+.home-header {
+    width: 100%;
+    background-color: #3a2d10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    .home-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        height: 56px;
+        img {
+            width: 106px;
+            height: 36px;
+            margin-left: 7.5px;
+        }
+        div {
+            margin-right: 7.5px;
+            i {
+                font-size: 29px;
+            }
+        }
+    }
+    .home-menus {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 56px;
+        li {
+            background-color: #3a2d10;
+            color: #FFF;
+            border-top: 1px solid #4b3a17;
+            text-align: center;
+            height: 45px;
+            line-height: 45px;
+            font-weight: bold;
+            &.active {
+                color: red;
+            }
+        }
+    }
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
