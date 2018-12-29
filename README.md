@@ -46,7 +46,7 @@ src
   index.html 模板文件
 ```
 ## redux结构
-![Alt text](./read/state.png)
+![Alt text](Read/state.png)
 
 ## 个人感悟（重难点）
 
