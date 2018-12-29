@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(session({
     resave: true,
-    secret: 'zfpx',
+    secret: 'aemple',
     saveUninitialized: true
 }));
 
