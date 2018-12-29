@@ -11,8 +11,8 @@
  ✏️ Node(express)
 
 ## 项目预览
-![Alt text](./read/sy.gif)
-![Alt text](./read/qt.gif)
+![Alt text](Read/sy.gif)
+![Alt text](Read/qt.gif)
 
 ## 运行项目
  git clone https://github.com/Aemple/react-demo
