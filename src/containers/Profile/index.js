@@ -3,6 +3,7 @@ import './index.less';
 import profile from '@/images/profile.png';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+
 @connect(state => state.session)
 export default class Profile extends Component {
     render() {
@@ -35,7 +36,6 @@ export default class Profile extends Component {
                     意见反馈
                     <i className="iconfont icon-arrow-right right"></i>
                     </div>
-                    
                 </div>
             </div>
         )

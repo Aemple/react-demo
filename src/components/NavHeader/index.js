@@ -7,9 +7,9 @@ export default class NavHeader extends Component {
     render(){
         return (
             <div className="navheader">
-              <i 
-              onClick={()=>this.props.history.goBack()}
-              className="iconfont icon-gongxiangtubiaozhuangtaileicaozuolei59"></i>
+                <i 
+                onClick={()=>this.props.history.goBack()}
+                className="iconfont icon-gongxiangtubiaozhuangtaileicaozuolei59"></i>
                 {this.props.title}
             </div>
         )

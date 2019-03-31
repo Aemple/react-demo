@@ -31,23 +31,23 @@ app.get('/getShow/:category',function(req,res){
     //   console.log(req.query);
     //   console.log(show);
     let category = req.params.category;
-   let {offset,limit} = req.query;
-   offset = isNaN(offset)?0:parseInt(offset);//偏移量 
-   limit = isNaN(limit)?5:parseInt(limit); //每页条数
-   let list = JSON.parse(JSON.stringify(show));
-   if(category!='all'){
-     list = list.filter(item=>item.category==category);
-   }
-   let total = list.length;
-   //分页数据
-   list = list.slice(offset,offset+limit);
-   //list.forEach(item=>item.title= item.title+Math.random());
-   setTimeout(function(){
-    res.json({
-        list,
-        hasMore:total>offset+limit
-    });
-   },1000);
+    let {offset,limit} = req.query;
+    offset = isNaN(offset)?0:parseInt(offset);//偏移量 
+    limit = isNaN(limit)?5:parseInt(limit); //每页条数
+    let list = JSON.parse(JSON.stringify(show));
+    if(category!='all'){
+         list = list.filter(item=>item.category==category);
+    }
+    let total = list.length;
+    //分页数据
+    list = list.slice(offset,offset+limit);
+    //list.forEach(item=>item.title= item.title+Math.random());
+    setTimeout(function(){
+        res.json({
+           list,
+           hasMore:total>offset+limit
+        });
+    },1000);
 });
 
 //登陆注册逻辑
@@ -59,6 +59,7 @@ app.post('/reg', function (req, res) {
         success: '注册成功'
     })
 });
+
 //user username password
 app.post('/login', function (req, res) {
     let body = req.body; //{username,password}

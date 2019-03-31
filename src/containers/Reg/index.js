@@ -6,6 +6,7 @@ import Alert from '@/components/Alert';
 import {Link} from 'react-router-dom';
 import actions from '@/store/actions/session';
 import {connect} from 'react-redux';
+
 @connect(
     state=>state.session,
     actions
@@ -26,13 +27,13 @@ export default class Reg extends Component {
                 用户名:<input ref={ref=>this.username=ref} type="text" placeholder="请输入用户名"/>
                 密码:<input  ref={ref=>this.password=ref} type="password"  placeholder="密码"/>
                 <button onClick={this.handleSubmit}>注&nbsp;&nbsp;册</button>
-                 <Link to="/reg">点击前往登录 》</Link>
-                 {
+                <Link to="/reg">点击前往登录 》</Link>
+                {
                     (this.props.success||this.props.error)&&(
                         <Alert
                         type={this.props.success?'success':'error'}
                         message={this.props.success||this.props.error}
-                       />
+                        />
                     )
                 }
             </div>
