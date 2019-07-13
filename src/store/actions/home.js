@@ -1,5 +1,6 @@
 import * as types from '../action-types';
 import {getSliders,getShow,getMenu} from '@/api/home';
+
 export default {
     changeCategory(category){
         return {type:types.CHANGE_CATEGORY,payload:category}

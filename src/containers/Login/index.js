@@ -6,6 +6,7 @@ import Alert from '@/components/Alert';
 import {Link} from 'react-router-dom';
 import actions from '@/store/actions/session';
 import {connect} from 'react-redux';
+
 @connect(
     state=>state.session,
     actions
@@ -26,13 +27,13 @@ export default class Login extends Component {
                 用户名:<input ref={ref=>this.username=ref} type="text" placeholder="请输入用户名"/>
                 密码:<input  ref={ref=>this.password=ref} type="password"  placeholder="密码"/>
                 <button onClick={this.handleSubmit}>登&nbsp;&nbsp;录</button>
-                 <Link to="/reg">还没有账号？赶快前往注册吧！</Link>
-                 {
+                <Link to="/reg">还没有账号？赶快前往注册吧！</Link>
+                {
                     (this.props.success||this.props.error)&&(
                         <Alert
                         type={this.props.success?'success':'error'}
                         message={this.props.success||this.props.error}
-                       />
+                        />
                     )
                 }
             </div>

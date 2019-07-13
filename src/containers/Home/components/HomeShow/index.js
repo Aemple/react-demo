@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import './index.less';
- import Loading from '@/components/Loading';
- import {Link} from 'react-router-dom';
+import Loading from '@/components/Loading';
+import {Link} from 'react-router-dom';
+
 export default class HomeShow extends Component {
     render(){
         let {list,hasMore,loading} = this.props.show;

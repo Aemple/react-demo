@@ -11,4 +11,3 @@ export function getMenu() {
 export function getShow(category, offset, limit) {
     return get(`/getShow/${category}?offset=${offset}&limit=${limit}`);
 }
-

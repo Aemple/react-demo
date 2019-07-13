@@ -1,6 +1,7 @@
 import * as types from '../action-types';
 import {login,reg} from '@/api/session';
 import {push} from 'react-router-redux';
+
 export default {
     reg(body){
         return function(dispatch,getState){
